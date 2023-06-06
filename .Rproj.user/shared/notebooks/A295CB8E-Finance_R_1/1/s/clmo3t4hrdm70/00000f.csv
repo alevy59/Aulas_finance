@@ -1,0 +1,21 @@
+"0","asset_returns_tq_builtin <- "
+"0","  prices %>%"
+"0","  timetk::tk_tbl(preserve_index = TRUE, "
+"0","         rename_index = ""date"") %>%"
+"0","  gather(asset, prices, -date) %>% "
+"0","  group_by(asset) %>%"
+"0","  tq_transmute(mutate_fun = periodReturn, "
+"0","               period = ""monthly"", "
+"0","               type = ""log"") %>% "
+"0","  spread(asset, monthly.returns) %>% "
+"0","  select(date, symbols) %>% "
+"0","  na.omit()"
+"2","Warning: Using an external vector in selections was deprecated in tidyselect 1.1.0.
+Please use `all_of()` or `any_of()` instead.
+# Was:
+data %>% select(symbols)
+
+# Now:
+data %>% select(all_of(symbols))
+
+See <https://tidyselect.r-lib.org/reference/faq-external-vector.html>."

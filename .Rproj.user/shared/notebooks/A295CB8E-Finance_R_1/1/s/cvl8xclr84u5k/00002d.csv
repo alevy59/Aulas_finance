@@ -1,0 +1,3 @@
+"0","map(1:5, hc_hist_fun, asset_returns_xts, ""blue"")"
+"1","[[1]]
+"
