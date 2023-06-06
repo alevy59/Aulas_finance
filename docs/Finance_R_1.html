@@ -144,12 +144,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">
- <span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link active" href="./Finance_R_1.html" aria-current="page">
- <span class="menu-text">Finance_R_1</span></a>
+ <span class="menu-text">Home</span></a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -277,10 +273,10 @@ A medida para isto se dá através dos retornos, obtidos pelo cálculo da varia�
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(prices,<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                SPY      EFA      IJS      EEM      AGG
-2012-12-31 117.8270 42.50938 34.73629 35.77432 86.56757
-2013-01-02 120.8470 43.16727 35.68937 36.47610 86.46624
-2013-01-03 120.5739 42.74861 35.64214 36.21798 86.24805
-2013-01-04 121.1034 42.96542 35.92122 36.29058 86.34153</code></pre>
+2012-12-31 117.8270 42.50938 34.73629 35.77433 86.56755
+2013-01-02 120.8469 43.16727 35.68939 36.47610 86.46626
+2013-01-03 120.5739 42.74862 35.64215 36.21798 86.24806
+2013-01-04 121.1034 42.96542 35.92122 36.29057 86.34152</code></pre>
 </div>
 </div>
 <p>Observe a sua classe</p>
@@ -333,10 +329,10 @@ A medida para isto se dá através dos retornos, obtidos pelo cálculo da varia�
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(prices_monthly,<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                SPY      EFA      IJS      EEM      AGG
-2012-12-31 117.8270 42.50938 34.73629 35.77432 86.56757
-2013-01-31 123.8586 44.09431 36.59525 35.66946 86.02983
-2013-02-28 125.4389 43.52613 37.19201 34.85477 86.53817
-2013-03-31 130.2019 44.09431 38.71982 34.49985 86.62341</code></pre>
+2012-12-31 117.8270 42.50938 34.73629 35.77433 86.56755
+2013-01-31 123.8586 44.09431 36.59525 35.66946 86.02988
+2013-02-28 125.4389 43.52613 37.19200 34.85477 86.53812
+2013-03-31 130.2020 44.09431 38.71982 34.49984 86.62341</code></pre>
 </div>
 </div>
 <p>Observe que agora temos apenas uma observação por mês, no novo objeto que ainda se mantém na classe xts.</p>
@@ -348,11 +344,11 @@ A medida para isto se dá através dos retornos, obtidos pelo cálculo da varia�
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">na.omit</span>()</span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(asset_returns_xts,<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>                  SPY         EFA        IJS          EEM           AGG
-2013-01-31 0.04992290  0.03660609 0.05213368 -0.002935519 -0.0062311105
-2013-02-28 0.01267813 -0.01296922 0.01617529 -0.023104959  0.0058914793
-2013-03-31 0.03726802  0.01296922 0.04025784 -0.010234898  0.0009844632
-2013-04-30 0.01903020  0.04896779 0.00122268  0.012084238  0.0096394870</code></pre>
+<pre><code>                  SPY         EFA         IJS          EEM           AGG
+2013-01-31 0.04992310  0.03660609 0.052133577 -0.002935625 -0.0062303134
+2013-02-28 0.01267825 -0.01296939 0.016175292 -0.023105066  0.0058903295
+2013-03-31 0.03726801  0.01296939 0.040257943 -0.010235119  0.0009849922
+2013-04-30 0.01902997  0.04896796 0.001222483  0.012084787  0.0096394870</code></pre>
 </div>
 </div>
 <p>Normalmente quando abordamos o termo retorno nos referimos ao retorno linear, calculado por: <span class="math display">\[ Retorno\,linear = \frac{Preço_{final}-Preço_{inicial}}{Preço_{inicial}}\]</span></p>
@@ -390,7 +386,7 @@ A medida para isto se dá através dos retornos, obtidos pelo cálculo da varia�
   &lt;date&gt;       &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
 1 2013-01-31  0.0499  0.0366  0.0521  -0.00294 -0.00623 
 2 2013-02-28  0.0127 -0.0130  0.0162  -0.0231   0.00589 
-3 2013-03-31  0.0373  0.0130  0.0403  -0.0102   0.000984
+3 2013-03-31  0.0373  0.0130  0.0403  -0.0102   0.000985
 4 2013-04-30  0.0190  0.0490  0.00122  0.0121   0.00964 
 5 2013-05-31  0.0233 -0.0307  0.0420  -0.0495  -0.0202  
 6 2013-06-30 -0.0134 -0.0271 -0.00140 -0.0547  -0.0158  </code></pre>
@@ -467,7 +463,8 @@ See &lt;https://tidyselect.r-lib.org/reference/faq-external-vector.html&gt;.</co
 <span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>                   <span class="at">sep=</span> <span class="st">" "</span>)) <span class="sc">%&gt;%</span> </span>
 <span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hc_add_theme</span>(<span class="fu">hc_theme_flat</span>()) <span class="sc">%&gt;%</span> </span>
 <span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hc_exporting</span>(<span class="at">enabled=</span><span class="cn">FALSE</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hc_legend</span>(<span class="at">enabled=</span><span class="cn">TRUE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hc_legend</span>(<span class="at">enabled=</span><span class="cn">TRUE</span>) </span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a><span class="do">##git </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Agora podemos introduzir o conceito de funções para criar os histogramas.</p>
 <div class="cell">

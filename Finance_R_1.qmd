@@ -325,7 +325,7 @@ hchart(hc_hist, color="cornflowerblue") %>%
   hc_add_theme(hc_theme_flat()) %>% 
   hc_exporting(enabled=FALSE) %>% 
   hc_legend(enabled=TRUE) 
-##
+##git 
 
 ```
 
