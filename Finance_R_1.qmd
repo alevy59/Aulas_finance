@@ -310,7 +310,7 @@ highchart(type = "stock") %>%
 No gráfico temos uma linha para os retornos mensais de cada ativo.
 Passe o mouse sobre o gráfico e examine como apresenta os dados de cada ativo.
 
-Hicharter também tem a capacidade de fazer histogramas.
+Hicharter também tem a capacidade de fazer histogramas. 
 
 ```{r highchart histogram,eval=FALSE}
 hc_hist<-hist(asset_returns_xts[, symbols[1]],
@@ -325,6 +325,7 @@ hchart(hc_hist, color="cornflowerblue") %>%
   hc_add_theme(hc_theme_flat()) %>% 
   hc_exporting(enabled=FALSE) %>% 
   hc_legend(enabled=TRUE) 
+##
 
 ```
 
